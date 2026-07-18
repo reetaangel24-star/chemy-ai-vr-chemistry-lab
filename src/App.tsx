@@ -1,21 +1,34 @@
 import Button from "./components/ui/Button/Button";
+import Card from "./components/ui/Card/Card";
+import Input from "./components/ui/Input/Input";
+import Typography from "./components/ui/Typography/Typography";
 
 function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-10 text-center max-w-md">
-        <h1 className="text-5xl font-bold text-cyan-400 mb-4">
-          Chemy
-        </h1>
+    <main className="min-h-screen flex items-center justify-center px-6">
+      <Card className="max-w-md w-full text-center">
 
-        <p className="text-slate-300 mb-8">
-          AI Powered VR Chemistry Lab
-        </p>
+        <Typography
+          title="Chemy"
+          subtitle="AI Powered VR Chemistry Lab"
+        />
 
-        <Button>
-          Enter Laboratory
-        </Button>
-      </div>
+        <div className="mt-8 space-y-4">
+
+          <Input placeholder="Enter Email" />
+
+          <Input
+            placeholder="Enter Password"
+            type="password"
+          />
+
+          <Button className="w-full">
+            Enter Laboratory
+          </Button>
+
+        </div>
+
+      </Card>
     </main>
   );
 }
